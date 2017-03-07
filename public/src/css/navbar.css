@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One');
+
+input:focus {
+  outline: none;
+}
+
+header {
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  height: 5em;
+  padding: 0 32px;
+  color: white;
+}
+
+
+
+header > .logo {
+  left: 32px;
+  min-width: 100px;
+  font-size: 2em;
+  color: white;
+}
+
+
+nav {
+  height: 100%;
+  margin-left: 32px;
+}
+
+nav a {
+  display: inline-block;
+  height: 100%;
+  line-height: 5em;
+  margin: 0 8px;
+  padding: 0 8px;
+  text-transform: uppercase;
+  transition: all 500ms;
+}
+
+nav a:hover {
+  color: #DA1A18;
+}
+
+header .search {
+  box-sizing: border-box;
+  position: absolute;
+  right: 32px;
+  width: 200px;
+  height: 100%;
+  border: none;
+  background-color: #DA1A18;
+  border-right: 1px solid #2b2b2b;
+  border-left: 1px solid #2b2b2b;
+  padding: 0 16px;
+  color: white;
+  /*font-size: 14px;*/
+}
+
+header .search::-webkit-input-placeholder {
+  color: white;
+}
+
+
+

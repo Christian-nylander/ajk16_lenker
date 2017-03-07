@@ -1,0 +1,17 @@
+
+.landingcomp {
+    width: 100%;
+    height: 90vh;
+    background: url("../../public/assets/asch.jpg") no-repeat right fixed;
+}
+
+.landinginfocomp {
+    position: absolute;
+    top: 26%;
+    left: 10%;
+    width: 28%;
+    height: 50vh;
+    border: solid 2px black;
+    font-family: 'Montserrat', sans-serif;
+}
+
