@@ -5,6 +5,7 @@ input:focus {
 }
 
 header {
+  z-index: 1000;
   box-sizing: border-box;
   position: fixed;
   width: 100%;
@@ -16,15 +17,16 @@ header {
   color: white;
 }
 
-
-
-header > .logo {
+header .logo {
   left: 32px;
   min-width: 100px;
   font-size: 2em;
   color: white;
 }
 
+.logo:hover {
+  cursor: pointer;
+}
 
 nav {
   height: 100%;
@@ -39,10 +41,6 @@ nav a {
   padding: 0 8px;
   text-transform: uppercase;
   transition: all 500ms;
-}
-
-nav a:hover {
-  color: #DA1A18;
 }
 
 header .search {
