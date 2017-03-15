@@ -40,12 +40,6 @@ const ProductPage = () => (
     </div>
 );
 
-const WorkshopPage = () => (
-    <div className="workshop">
-        <h1>Workshop</h1>
-    </div>
-);
-
 const BackstagePage = () => (
     <BackstageComp />
 );
@@ -60,7 +54,6 @@ ReactDOM.render((
             <Route path="/" component={ App }>
                 <IndexRoute component={Home}/>
                 <Route path="/products" component={ProductPage}/>
-                <Route path="/workshop" component={WorkshopPage}/>
                 <Route path="/backstage" component={BackstagePage}/>
                 <Route path="/partners" component={PartnerPage}/>
             </Route>

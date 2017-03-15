@@ -10,11 +10,10 @@ const Navbar = (props) => (
 
         <nav>
             <Link to="/products" activeStyle={Active}>PRODUCTS</Link>
-            <Link to="/workshop" activeStyle={Active}>WORK SHOP</Link>
             <Link to="/backstage" activeStyle={Active}>BACKSTAGE</Link>
             <Link to="/partners" activeStyle={Active}>PARTNERS</Link>
         </nav>
-            <input id="searchValue" className="search" type="search" placeholder="SEARCH"/>
+            <div id="searchValue" className="search"><i className="fa fa-phone-square" aria-hidden="true"></i> 0707-706050</div>
     </header>
 );
 

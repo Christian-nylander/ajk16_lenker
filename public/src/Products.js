@@ -1,9 +1,6 @@
 import axios from 'axios';
 import React, {Component} from 'react';
-// import Request from 'superagent';
-// import _ from 'lodash';
 import "./css/items.css";
-// import input from './Navbar';
 
 
 // export default class Products extends Component {
@@ -61,14 +58,12 @@ import "./css/items.css";
 //     }
 // }
 
-
 export default class Products extends Component {
     constructor(props) {
         super(props);
         this.state = {
             products: [],
-            foundProducts: [],
-            showInStock: false
+            foundProducts: []
         }
     }
 
@@ -97,36 +92,30 @@ export default class Products extends Component {
     };
 
     search() {
-        const { products, showInStock } = this.state;
+        const {products} = this.state;
         let query = this.searchInput.value;
         let foundProducts = [];
-        if (showInStock) {
-            console.log('in stock');
-            foundProducts = products.filter((product) =>
-                product.showInStock && (product.name.toLowerCase().includes(query.toLowerCase()) || product.manufacturer.toLowerCase().includes(query.toLowerCase()) || product.consumerPrice.toString().includes(query))
-            );
-        } else {
+        if (foundProducts) {
             foundProducts = products.filter((product) =>
                 (product.name.toLowerCase().includes(query.toLowerCase()) || product.manufacturer.toLowerCase().includes(query.toLowerCase()) || product.consumerPrice.toString().includes(query))
             );
         }
-
-        this.setState({ foundProducts });
-
+        this.setState({foundProducts});
     }
 
     render() {
-        const {products, foundProducts, showInStock} = this.state;
+        const {products, foundProducts} = this.state;
         return (
             <div className="product-page">
-                <input
-                    type="text"
-                    id="search"
-                    ref={(element) => this.searchInput = element }
-                    onChange={() => this.search()}
-                />
-                <input type="checkbox" id="inStock" onClick={() => this.setState({ showInStock: !showInStock })} checked={showInStock}/>
-                <label htmlFor="inStock">Only show products in stock</label>
+                <div className="input-container">
+                    <input
+                        type="text"
+                        id="search"
+                        ref={(element) => this.searchInput = element }
+                        onChange={() => this.search()}
+                        placeholder="&#xF002;"
+                    />
+                </div>
                 <div className="product-container">
                     {
                         !foundProducts.length ?
@@ -138,4 +127,3 @@ export default class Products extends Component {
         );
     }
 }
-
